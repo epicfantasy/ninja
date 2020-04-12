@@ -35,6 +35,7 @@ public class bee : MonoBehaviour
         {
             GameObject dead = Instantiate(ded);
             dead.transform.position = transform.position;
+            dead.transform.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
